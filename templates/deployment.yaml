@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: {{ .Values.deployment.name }}
-    {{- template "labels" }}
+    {{- include "labels" }}
   name: my-deploy
 spec:
   replicas: {{ .Values.deployment.replicas }}
