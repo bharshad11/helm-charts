@@ -1,9 +1,8 @@
-replicaCount: 3
-image:
-  repository: nginx
-  tag: latest
-  pullPolicy: IfNotPresent
-service:
-  type: ClusterIP
-  port: 80
+deployment:
+  name: my-deploy
+  replicas: 3
+  image: nginx
 
+service:
+  name: my-service
+  type: NodePort
